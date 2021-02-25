@@ -30,7 +30,7 @@ const auth = (req, res, next) => {
 app.get('/', (req, res) => {
     res.json({
         jwt: jwt.sign({ info: 'payload' }, process.env.SECRET, {
-            expiresIn: 60 * 1,
+            expiresIn: 60 * 1, // 1 minutes
         }),
     })
 })
